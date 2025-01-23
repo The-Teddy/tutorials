@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body {
+            height: 100vh;
+            overflow: hidden;
+        }
+        .container {
+            background: #f2f2f2;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 50px;
+        }
+        .button {
+            background: #6959cd;
+            color: #fff;
+            font-weight: 500;
+            border: none;
+            border-radius: 8px;
+            height: 45px;
+            width: 250px;
+            cursor: pointer;
+        }
+        .button:hover {
+            scale: .95;
+            opacity: .85;
+            transition: 1s all ease;
+        }
+        .modal {
+            background: #fff;
+            position: absolute;
+            box-shadow: 0 8px 15px rgb(0, 0,0, 0.2);
+            height: 500px;
+            width: 400px;
+            border-radius: 8px;
+            padding: 25px;
+            align-items: center;
+            flex-direction: column;
+            justify-content: space-between;
+            top: -600px;
+            opacity: 0;
+            transition: 1s all ease;
+            display: flex;
+            
+        }
+        .modal:target {
+            top: 50px;
+            transition: 1s all ease;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <main class="container">
+        <h1>Olá, aqui tem um modal</h1>
+        <a href="#modal"><button class="button">
+            Abra o Modal
+        </button></a>
+        <div class="modal" id="modal">
+            <h2>Olá, bem vindo ao modal</h2>
+            <a href="#"><button class="button">
+                Fechar o modal
+            </button></a>
+        </div>
+    </main>
+</body>
+</html>
